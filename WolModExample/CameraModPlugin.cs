@@ -31,6 +31,7 @@ namespace CameraModExample {
 
         //     For further reading, you can check out https://docs.unity3d.com/ScriptReference/MonoBehaviour.html
 
+        // now, close these two Notes regions so the script looks little nicer to work with 
         #endregion
 
         // Just declaring a variable we'll use later
@@ -53,32 +54,34 @@ namespace CameraModExample {
 
             // Every frame, we'll check if the user is currently pressing f1 on the keyboard
             if (Input.GetKeyDown(KeyCode.F1)) {
+
                 //if they just pressed f1 this frame, let's zoom the camera out
                 CameraController.originalCameraSize += 0.5f;
-                Logger.LogMessage("zooming the camera out to " + CameraController.originalCameraSize);
+                Debug.Log("zooming the camera out to " + CameraController.originalCameraSize);
             }
 
             // same as above, but pressing f2 to zoom in
             if (Input.GetKeyDown(KeyCode.F2)) {
+
                 CameraController.originalCameraSize -= 0.5f;
-                Logger.LogMessage("zooming the camera in to " + CameraController.originalCameraSize);
+                Debug.Log("zooming the camera in to " + CameraController.originalCameraSize);
             }
         }
 
-            // Here, we'll hook on to the CameraController's Awake function, to mess with things when it initializes.
-            private void CameraController_Awake(On.CameraController.orig_Awake orig, CameraController self) {
+        // Here, we'll hook on to the CameraController's Awake function, to mess with things when it initializes.
+        private void CameraController_Awake(On.CameraController.orig_Awake orig, CameraController self) {
 
             // This orig() line is very important. this is executing the original function we've hooked to.
             // If you don't call this orig() function, the game's original function will not run 
             orig(self);
 
-            // After the camera initalizes, I'm swoocing right in and increasing these values so the players can run away from each other a huge distance (instead of being stuck on screen)
-            // 'self' refers to the current instance of the CameraController that's calling this function. with self, you have access to the original class's variables and methods to change/call
+            // After the camera initalizes, I'm swoocing right in and increasing these values so the players can run away from each other a huge distance (instead of being stuck at the camera border)
+            // 'self' refers to the current reference of the CameraController that's calling this function, so we use that to mess with its current variables.
             self.maxHorizontalDistBetweenPlayers = 100;
             self.maxVerticalDistBetweenPlayers = 100;
             self.teleportToOtherPlayerRange = 120;
 
-            // Zooming out the camera a little bit by default cause I want that
+            // Just Zooming out the camera a little bit by default cause I want that
             if (!hasZoomedCamera) {
                 //But only need to do it once
                 hasZoomedCamera = true;
@@ -110,16 +113,6 @@ namespace CameraModExample {
             // So for this hook i'm simply doing it again, but without the pvp check, so it always does it.
 
             // And we're done! Build this mod, put it in Plugins, and run the game!
-
-            #region end notes
-            // optional note: about the above code, ordinarily, simply copypasting code from the game is kinda bad practice, but that's a subject in itself
-            //     copypasting their code and tweaking things is kind of a cop-out, also a lot of the time ain't even gonna cut it
-            //         what you want is to really understand what's happening in their code, then figure out what you want to do by adding your additional code.
-            //         it's a pretty interesting unique problem to solve. gotta think outside the box almost literally
-
-            // that said, for simple things like this, and until you really wrap your head around all this, it's fine. it'll come with experience
-            // tl;dr I believ in you c:
-            #endregion
         }
     }
 }

@@ -1,0 +1,17 @@
+You should be looking at a folder with all the necessary libs ready.
+If you don't have them (or are just curious) here's where they're from:
+
+Needed references:
+- yourgamepath/BepInEx/core
+	- dll files only
+
+- yourgamepath/WizardofLegend_data/managed/
+	- Unityengine.dll
+	- UnityEngine.UI.dll
+
+- publicized Assembly-CSharp.dll
+	- follow some resource on how to publicize with reins tool
+	- if there is nothing linked here timesweeper forgot to add it ping him and call him silly names. 
+
+- MMHOOK.dll
+	- run the game once, and hookgenpatcher will generate an MMHOOK file. It will be in your BepInEx/Plugins folder
