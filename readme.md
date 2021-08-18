@@ -1,6 +1,6 @@
 # Welcome! to modding
 
-tutorial v1. the very basics.
+Guide v1. the very basics.
 
 ## What you'll need
 - Wizard of Legend
@@ -14,7 +14,7 @@ This repo is a simple template for you to be able to start modding and build an 
 
 1. Download or clone this repo
 2. Open the WolModExample.csproj in visual studio
-3. Build > Build all 
+3. Build > Build WolModExample 
 
 And we're good!
 
@@ -90,5 +90,8 @@ private void CameraController_Awake(On.CameraController.orig_Awake orig, CameraC
 	//now we can run really far from each other!
 }
 ```
-I believe that should get you started? Go forth and do amazing things!  
-Feel free to take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on. If you have any questions go ahead and ask in the Wizard of Legend discord (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
+I believe that should get you started? Go forth and do amazing things!
+
+Feel free to take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on. If you have any questions go ahead and ask in the [Wizard of Legend discord](https://discord.gg/wizardoflegend) (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
+
+Also of course give any and all feedback on this guide will be very appreciated. Thanks thanks have a lovely evening c:
