@@ -23,6 +23,7 @@ And we're good!
 6. Press f1 and f2 to zoom in/out the camera, and if you have a second controller handy, go into coop mode and run around freely
 
 ## Alright what's going on
+(Under construction)  
 Let's take a deeper look at this template so know just what's needed to make a mod. 
 
 ### The Project Environment
@@ -38,11 +39,11 @@ You can also look at the `CameraModPlugin.cs` and read the notes about it there.
 To start working on your own mod, you can follow along that link, or you can simply start here in this repo, and delete everything but the `CameraModPlugin` class and the `Awake` function. (little jank I know)  
 If you're creating a new project from scratch, add the  `ModAccess.cs` from the repo as well.
 
-### The Code
+## The Code
 
 There are two main ways to write code in a bepin plugin. MMHooks, and HarmonyPatches. For simplicity, I'll just be going over MMHook here. You can read more about Harmony [here](https://github.com/BepInEx/HarmonyX/wiki/Basic-usage)
 
-#### MMHook
+### MMHook
 
 Hooks are a powerful tool that lets us write code that executes alongside the code of the game.  
 To create a hook, it looks something like this:
