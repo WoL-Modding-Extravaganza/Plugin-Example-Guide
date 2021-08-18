@@ -23,12 +23,20 @@ And we're good!
 6. Press f1 and f2 to zoom in/out the camera, and if you have a second controller handy, go into coop mode and run around freely
 
 ## Alright what's going on
-Let's take a deeper look at this template so know just what's needed to make a mod.
+Let's take a deeper look at this template so know just what's needed to make a mod. 
 
 ### The Project Environment
 To be continued.  
 This stuff is basically taken care of with the /lib/ folder in our project.  You should be clear to download it and skip to the next section.  
-For more information, and/or if you need/want to set it up yourself, see the [bepin docs about setting it up](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/1_setup.html). (At the point where you create a project, make it target .net 3.5, and at the point where you're looking for the Assembly-CSharp.dll, use the one from the /lib/ folder in this repo.)
+For more information, and/or if you need/want to set it up yourself, see the [bepin docs about setting it up](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/1_setup.html). (At the point where you create a project, make it target .net 3.5, and at the point where you're looking for the Assembly-CSharp.dll, use the one from the /lib/ folder in this repo.) 
+
+### BaseUnityPlugin
+
+Also To be continued.  
+[bepin docs are pretty good here as well](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/2_plugin_start.html)  
+You can also look at the `CameraModPlugin.cs` and read the notes about it there.  
+To start working on your own mod, you can follow along that link, or you can simply start here in this repo, and delete everything but the `CameraModPlugin` class and the `Awake` function. (little jank I know)  
+If you're creating a new project from scratch, add the  `ModAccess.cs` from the repo as well.
 
 ### The Code
 
