@@ -98,6 +98,9 @@ private void CameraController_Awake(On.CameraController.orig_Awake orig, CameraC
 ```
 I believe that should get you started? Go forth and do amazing things!
 
-Take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on. If you have any questions go ahead and ask in the [Wizard of Legend discord](https://discord.gg/wizardoflegend) (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
+Take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on.  
+Absolutely get [dnSpy](https://github.com/risk-of-thunder/R2Wiki/wiki/Code-Analysis-with-dnSpy) if you haven't, so you can [look at the game's code](https://github.com/risk-of-thunder/R2Wiki/wiki/Code-Analysis-with-dnSpy). (link stolen from ror2 modding wiki (but applies here of course))  
+
+If you have any questions go ahead and ask in the [Wizard of Legend discord](https://discord.gg/wizardoflegend) (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
 
 Also of course give any and all feedback on this guide will be very appreciated. Thanks thanks have a lovely evening c:
