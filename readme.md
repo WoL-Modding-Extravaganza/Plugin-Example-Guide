@@ -12,9 +12,9 @@ This repo is a simple template for you to be able to start modding and build an 
 
 ### Let's do it baybee
 
-1. Download or clone this repo
-2. Open the WolModExample.csproj in visual studio
-3. Build > Build WolModExample 
+1. Download or clone this repo anywhere on your computer.
+2. Open the WolModExample.csproj in visual studio (now's the time to download it if you don't have it)
+3. At the top, go to `Build > Build WolModExample`
 
 And we're good!
 
