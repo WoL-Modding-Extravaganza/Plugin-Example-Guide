@@ -31,7 +31,7 @@ However, the resources are there if you want to learn. It's in a state where it 
 
 ### The Project Environment
 (Under Construction)  
-If you've downloaded this repo, you should be clear to download this repo and skip to the next section. it's a working project environment you can use to create a mod.  
+If you've downloaded this repo, you should be clear to open the project and skip to the next section. it's a working project environment you can use to create a mod.  
 To make your own project from scratch, quick and dirty guide is:  
 - open Visual Studio Community
 - create a new Class Library (c#)
