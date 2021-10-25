@@ -16,28 +16,34 @@ This repo is a simple template for you to be able to start modding and build an 
 2. Open the WolModExample.csproj in visual studio (now's the time to download it if you don't have it)
 3. At the top, go to `Build > Build WolModExample`
 
-And we're good!
+And we're good! The you have just built the mod. You can now add the mod to your game:
 
 4. Navigate to `Plugin-Example-Guide/WolModExample/bin/Debug/` and find your `WolModExample.dll`
-5. Add that to your BepInEx/plugins folder and you can run the game with the mod
+5. Add that to your `BepInEx/plugins` folder and you can run the game with the mod
 6. Press f1 and f2 to zoom in/out the camera, and if you have a second controller handy, go into coop mode and run around freely
 
 ## Alright what's going on
+Let's take a deeper look at this template so know just what's needed to make a mod.
+
 (Under construction)  
-Let's take a deeper look at this template so know just what's needed to make a mod. 
+In all transparency, the modding scene for this game is not in a state where you can find a step-by-step guide on creating a mod.  
+However, the resources are there if you want to learn. It's in a state where it is definitely possible to figure out if you dive in to it. Follow this project as best as you can, and ask questions in the modding discord.  
 
 ### The Project Environment
-To be continued.  
-This stuff is basically taken care of with the /lib/ folder in our project.  You should be clear to download it and skip to the next section.  
-For more information, and/or if you need/want to set it up yourself, see the [bepin docs about setting it up](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/1_setup.html). (At the point where you create a project, make it target .net 3.5, and at the point where you're looking for the Assembly-CSharp.dll, use the one from the /lib/ folder in this repo.) 
+(Under Construction)  
+If you've downloaded this repo, you should be clear to download this repo and skip to the next section. it's a working project environment you can use to create a mod.  
+To make your own project from scratch, quick and dirty guide is:  
+- open Visual Studio Community
+- create a new Class Library (c#)
+- grab the `/lib/` folder from this repo and place it in your project directory
+- in the project, [add reference](https://docs.microsoft.com/en-us/visualstudio/ide/managing-references-in-a-project?view=vs-2019) to all the dlls in the `/lib/` folder
+- as well, make sure you grab the [ModAccess.cs](https://github.com/WoL-Modding-Extravaganza/Plugin-Example-Guide/blob/main/WolModExample/ModAccess.cs) script and place that in your project.
+- take a look at [CameraModPlugin.cs](https://github.com/WoL-Modding-Extravaganza/Plugin-Example-Guide/blob/main/WolModExample/CameraModPlugin.cs), and use that as a basis in your new c# class. Main three things to copy over are the `BepInPlugin` attribute in brackets, the class `public class myclass : BaseUnityPlugin`, and the function `void Awake` within it.
 
 ### BaseUnityPlugin
 
-Also To be continued.  
-[bepin docs are pretty good here as well](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/2_plugin_start.html)  
-You can also look at the `CameraModPlugin.cs` and read the notes about it there.  
-To start working on your own mod, you can follow along that link, or you can simply start here in this repo, and delete everything but the `CameraModPlugin` class and the `Awake` function. (little jank I know)  
-If you're creating a new project from scratch, add the  `ModAccess.cs` from the repo as well.
+(Also Under Construction)  
+Take a look at the [CameraModPlugin.cs](https://github.com/WoL-Modding-Extravaganza/Plugin-Example-Guide/blob/main/WolModExample/CameraModPlugin.cs) file and at the top, read the `BepInPlugin Notes` and the `BaseUnityPlugin Notes`.  
 
 ## The Code
 
@@ -92,6 +98,6 @@ private void CameraController_Awake(On.CameraController.orig_Awake orig, CameraC
 ```
 I believe that should get you started? Go forth and do amazing things!
 
-Feel free to take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on. If you have any questions go ahead and ask in the [Wizard of Legend discord](https://discord.gg/wizardoflegend) (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
+Take a look at the overly commented `CameraModPlugin.cs` and see if you can follow what's going on. If you have any questions go ahead and ask in the [Wizard of Legend discord](https://discord.gg/wizardoflegend) (#modding-extravaganza) and/or ping TheTimesweeper#5727 he craves attention.
 
 Also of course give any and all feedback on this guide will be very appreciated. Thanks thanks have a lovely evening c:
