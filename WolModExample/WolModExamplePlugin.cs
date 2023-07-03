@@ -4,15 +4,15 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CameraModExample {
+namespace WolModExample {
 
     #region BepInPlugin Notes
-    // The BepInPlugin attribute in [brackets] is setting parameters for bepin to load your mod
+    // The BepInPlugin attribute in [brackets] is setting parameters for BepInEx to load your mod
 
-    // GUID: "TheTimeSweeper.CameraModExample"
+    // GUID: "AuthorName.WolModExample"
     // The the identifier for your mod. This one simply follows the convention of "AuthorName.YourModName"
 
-    // Name: "CameraModExample"
+    // Name: "WolModExample"
     // The the full human-readable name of your mod.
 
     // Version: "0.1.0"
@@ -20,8 +20,8 @@ namespace CameraModExample {
     //     Customary to follow Semantic Versioning (major.minor.patch). 
     //         You don't have to, but you'll just look silly in front of everyone. It's ok. I won't make fun of you.
     #endregion
-    [BepInPlugin("TheTimeSweeper.CameraModExample", "CameraModExample", "0.1.0")]
-    public class CameraModPlugin : BaseUnityPlugin {
+    [BepInPlugin("AuthorName.WolModExample", "WolModExample", "0.1.0")]
+    public class WolModExamplePlugin : BaseUnityPlugin {
         #region BaseUnityPlugin Notes
         // BaseUnityPlugin is the main class that gets loaded by bepin.
         // It inherits from MonoBehaviour, so it gains all the familiar Unity callback functions you can use: 
@@ -45,27 +45,9 @@ namespace CameraModExample {
             
             // These are hooks
             // They hook on to the functions in the game. When the hooked functon is called, our functon will be called
+            // See the Example Mod tutorial for more info
             On.CameraController.Awake += CameraController_Awake;
             On.CameraController.Update += CameraController_Update;
-        }
-
-        // This Update() function will run every frame
-        void Update() {
-
-            // Every frame, we'll check if the user is currently pressing f1 on the keyboard
-            if (Input.GetKeyDown(KeyCode.F1)) {
-
-                //if they just pressed f1 this frame, let's zoom the camera out
-                CameraController.originalCameraSize += 0.5f;
-                Debug.Log("zooming the camera out to " + CameraController.originalCameraSize);
-            }
-
-            // same as above, but pressing f2 to zoom in
-            if (Input.GetKeyDown(KeyCode.F2)) {
-
-                CameraController.originalCameraSize -= 0.5f;
-                Debug.Log("zooming the camera in to " + CameraController.originalCameraSize);
-            }
         }
 
         // Here, we'll hook on to the CameraController's Awake function, to mess with things when it initializes.
@@ -114,5 +96,25 @@ namespace CameraModExample {
 
             // And we're done! Build this mod, put it in Plugins, and run the game!
         }
+
+        // This Update() function will run every frame
+        void Update() {
+
+            // Every frame, we'll check if the user is currently pressing f1 on the keyboard
+            if (Input.GetKeyDown(KeyCode.F1)) {
+
+                //if they just pressed f1 this frame, let's zoom the camera out
+                CameraController.originalCameraSize += 0.5f;
+                Debug.Log("zooming the camera out to " + CameraController.originalCameraSize);
+            }
+
+            // same as above, but pressing f2 to zoom in
+            if (Input.GetKeyDown(KeyCode.F2)) {
+
+                CameraController.originalCameraSize -= 0.5f;
+                Debug.Log("zooming the camera in to " + CameraController.originalCameraSize);
+            }
+        }
+
     }
 }

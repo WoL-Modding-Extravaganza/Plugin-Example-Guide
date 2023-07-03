@@ -36,7 +36,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CameraModPlugin.cs" />
+    <Compile Include="WolModExamplePlugin.cs" />
     <Compile Include="ModAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
