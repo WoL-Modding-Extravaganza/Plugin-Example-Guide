@@ -43,7 +43,7 @@ namespace WolModExample
         {
             // This is the just a first little tester code to see if our mod is running on WoL. You'll see it in the BepInEx console
             Debug.Log("I belive in you c:");
-
+            
             // These are hooks
             // They hook on to the functions in the game. When the hooked functon is called, our functon will be called
             // See the Example Mod tutorial for more info

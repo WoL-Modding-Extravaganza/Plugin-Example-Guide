@@ -62,6 +62,9 @@
     <Reference Include="HarmonyXInterop">
       <HintPath>lib\HarmonyXInterop.dll</HintPath>
     </Reference>
+    <Reference Include="LegendApi">
+      <HintPath>lib\LegendApi.dll</HintPath>
+    </Reference>
     <Reference Include="MMHOOK_Assembly-CSharp">
       <HintPath>lib\MMHOOK_Assembly-CSharp.dll</HintPath>
     </Reference>
