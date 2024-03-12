@@ -74,7 +74,7 @@ namespace WolModExample
             }
         }
 
-        // Here, we're hooking on the Update function. This code runs every frame on that CameraController
+        // Here, we're hooking on the CameraController's Update function. This code runs every frame on that CameraController
         private void CameraController_Update(On.CameraController.orig_Update orig, CameraController self)
         {
             orig(self);
